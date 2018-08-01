@@ -17,6 +17,11 @@ class ViewController: UIViewController {
         let firstView = UIView(frame: firstFrame)
         firstView.backgroundColor = .blue
         view.addSubview(firstView)
+        
+        let secondFrame = CGRect(x: 20, y: 30, width: 50, height: 50)
+        let secondView = UIView(frame: secondFrame)
+        secondView.backgroundColor = .green
+        view.addSubview(secondView)
     }
 }
 
