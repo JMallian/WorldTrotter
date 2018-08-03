@@ -98,11 +98,11 @@
 			isa = PBXGroup;
 			children = (
 				4C223CB4211275D000E80868 /* AppDelegate.swift */,
+				4C223CE22114E06A00E80868 /* ConversionViewController.swift */,
 				4C223CB8211275D000E80868 /* Main.storyboard */,
 				4C223CBB211275DB00E80868 /* Assets.xcassets */,
 				4C223CBD211275DB00E80868 /* LaunchScreen.storyboard */,
 				4C223CC0211275DB00E80868 /* Info.plist */,
-				4C223CE22114E06A00E80868 /* ConversionViewController.swift */,
 			);
 			path = WorldTrotter;
 			sourceTree = "<group>";
