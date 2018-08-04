@@ -33,10 +33,10 @@ class ConversionViewController: UIViewController {
     
     //MARK: functions
     @IBAction func fahrenheitFieldEditingChanged(_ textField: UITextField) {
-        if let text = textField.text, !text.isEmpty {
-            celsiusLabel.text = text
+        if let text = textField.text, let value = Double(text) {
+            fahrenheitValue = Measurement(value: value, unit: .fahrenheit)
         }else{
-            celsiusLabel.text = "???"
+            fahrenheitValue = nil
         }
     }
     
