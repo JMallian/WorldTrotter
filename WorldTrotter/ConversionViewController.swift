@@ -63,13 +63,18 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
     
     //MARK: delegate method
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        //don't want to allow more than 1 decimal
         let existingTextHasDecimalSeparator = textField.text?.range(of: ".")
         let replacementTextHasDecimalSeparator = string.range(of: ".")
         
-        if existingTextHasDecimalSeparator != nil, replacementTextHasDecimalSeparator != nil {
+        //don't want to allow letters either
+        let letters = NSCharacterSet.letters
+        
+        if (existingTextHasDecimalSeparator != nil && replacementTextHasDecimalSeparator != nil) || (string.rangeOfCharacter(from: letters) != nil) {
             return false
         }else{
             return true
         }
     }
+    //TODO: currently user cannot enter a negative number - possibly because this project was designed by people in California and not Minnesota :D 
 }
