@@ -41,6 +41,11 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
     
     
     //MARK: functions
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        print("ConversionViewController loaded it's view.")
+    }
+    
     @IBAction func fahrenheitFieldEditingChanged(_ textField: UITextField) {
         if let text = textField.text, let value = Double(text) {
             fahrenheitValue = Measurement(value: value, unit: .fahrenheit)
