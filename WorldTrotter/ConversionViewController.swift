@@ -46,6 +46,11 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
         print("ConversionViewController loaded it's view.")
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        updateBackgroundColor()
+    }
+    
     @IBAction func fahrenheitFieldEditingChanged(_ textField: UITextField) {
         if let text = textField.text, let value = Double(text) {
             fahrenheitValue = Measurement(value: value, unit: .fahrenheit)
@@ -79,6 +84,18 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
             return false
         }else{
             return true
+        }
+    }
+    
+    //MARK: Silver Challenge: Dark Mode - update background color of ConverstionViewController based on the time of day, override viewWillAppear to accomplish this
+    func updateBackgroundColor() {
+        let calendar = Calendar.current
+        let date = Date()
+        let hour = calendar.component(.hour, from: date)
+        if hour < 7 || hour > 18 {
+            view.backgroundColor = .gray
+        }else{
+            view.backgroundColor = UIColor(red: 136/255, green: 192/255, blue: 183/255, alpha: 1.0)
         }
     }
     //TODO: currently user cannot enter a negative number - possibly because this project was designed by people in California and not Minnesota :D 
