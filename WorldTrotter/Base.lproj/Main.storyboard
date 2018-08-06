@@ -89,7 +89,17 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1996" y="439"/>
+            <point key="canvasLocation" x="1946" y="722"/>
+        </scene>
+        <!--Web-->
+        <scene sceneID="8tW-al-fwB">
+            <objects>
+                <viewController id="Zdf-Fq-TbU" customClass="WebViewController" customModule="WorldTrotter" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Web" id="C1e-43-Z98"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gLv-S5-1pq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1945" y="-685"/>
         </scene>
         <!--Map-->
         <scene sceneID="tY6-Mn-V0N">
@@ -99,7 +109,7 @@
                     <tabBarItem key="tabBarItem" title="Map" image="tabBarItem:U6X-Gg-bF5:image" id="U6X-Gg-bF5"/>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="1996" y="-256"/>
+            <point key="canvasLocation" x="1946" y="27"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="1bR-Nj-L0l">
@@ -113,6 +123,7 @@
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="16D-o4-eiV"/>
                         <segue destination="Opp-94-eaX" kind="relationship" relationship="viewControllers" id="9xR-lA-vSA"/>
+                        <segue destination="Zdf-Fq-TbU" kind="relationship" relationship="viewControllers" id="6sh-I3-dFC"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WJr-GP-F2o" userLabel="First Responder" sceneMemberID="firstResponder"/>
